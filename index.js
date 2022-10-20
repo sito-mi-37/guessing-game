@@ -15,9 +15,9 @@ function guess(range, score = 1) {
       console.log('you got it right');
       hasWon = true;
     } else if (secretNum > userNum) {
-      console.log('too low... TRY AGAIN :(')
+      console.log(`too low... ${newTurn === 2 ? "" : "TRY AGAIN"} :(`)
     } else if (secretNum < userNum) {
-      console.log('too high... TRY AGAIN :(')
+      console.log(`too high... ${newTurn === 2 ? "" : "TRY AGAIN"} :(`)
     } else {
       console.log('that is not a number')
     }
@@ -35,5 +35,4 @@ function guess(range, score = 1) {
     return;
   }
 }
-
 guess(2, 1)
